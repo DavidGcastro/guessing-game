@@ -1,7 +1,6 @@
 {
   "name": "styles",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,5 +25,15 @@
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^2.1.2",
     "postcss-simple-vars": "^4.1.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidGcastro/guessing-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DavidGcastro/guessing-game/issues"
+  },
+  "homepage": "https://github.com/DavidGcastro/guessing-game#readme",
+  "description": ""
 }

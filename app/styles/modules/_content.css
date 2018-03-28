@@ -36,8 +36,26 @@
             margin-top: 10px;
 
         }
-        ;
+
         font-size: 3vh;
+    }
+
+    img {
+
+        display: none;
+
+
+        @mixin atMedium {
+            display: inline;
+            width: 100%;
+            flex: none;
+            position: relative;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            max-width: 150px;
+
+        }
     }
 }
 
@@ -72,7 +90,7 @@
         order: 0;
     }
 
-    background-color: #a4b6d3;
+
     flex: 1;
     padding: 1rem;
     display: flex;
@@ -108,6 +126,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+
+
+
+
 
 
     img {
@@ -123,21 +146,44 @@
 
     }
 
-    #previewViewer {
+    #hintViewer {
 
         text-align: center;
         margin: 0 auto;
         width: 50%;
     }
 
-    #previewViewerList {
+    .buttons {
+        width: 100%;
+        text-align: center;
         margin: 0 auto;
 
+        position: absolute;
+        bottom: 3px;
+
+        @mixin atSmall {
+            position: static;
+        }
 
 
 
-        li {}
+
+        &__button {
+            transition: all 100ms ease-in;
+
+            border: 1px black solid;
+            padding: 1vh 1vh;
+
+            cursor: pointer;
+
+
+            &:hover {
+                padding: 12px;
+            }
+        }
+
     }
+
 }
 
 
@@ -145,23 +191,21 @@
 
     transition: all .300s ease-in;
     padding: 0;
-    margin-top: 5px;
+    margin-top: 10px;
     list-style: none;
     height: 0;
     color: black;
 
-    .searchName {
-        margin-right: 20px;
-    }
 
     li {
         margin: 5px 0;
         position: relative;
         transition: all .300s ease-in;
+        border: 1px solid black;
+        display: inline-block;
+        padding: 2vh 3vh;
+        border-radius: 10%;
 
-        @mixin atMedium {
-            padding: 0;
-        }
 
 
     }

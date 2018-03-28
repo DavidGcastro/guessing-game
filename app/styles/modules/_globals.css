@@ -8,7 +8,12 @@ html {
 }
 
 * {
+    list-style: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-decoration: none;
+}
+
+ul {
+    padding: 0;
 }

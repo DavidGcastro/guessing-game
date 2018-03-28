@@ -1,5 +1,14 @@
-body {
-    background: pink;
-    font-size: 80px;
+body,
+html {
+    background: #f8f8f8!important;
+    font-family: Oswald, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
 }

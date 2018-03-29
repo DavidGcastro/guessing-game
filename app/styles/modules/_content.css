@@ -43,11 +43,10 @@
     img {
 
         display: none;
-
-
         @mixin atMedium {
             display: inline;
-            width: 100%;
+            /*            width: 100%;
+            */
             flex: none;
             position: relative;
             width: 50%;
@@ -60,6 +59,7 @@
 }
 
 .leftSide {
+    z-index: 5;
 
     &--random {
         transition: all 200ms ease-in;
@@ -102,7 +102,6 @@
 
     #myInput {
         font-size: 1rem;
-
         @mixin atMedium {
             font-size: 1.5vh;
 
@@ -154,6 +153,7 @@
     }
 
     .buttons {
+        z-index: 5;
         width: 100%;
         text-align: center;
         margin: 0 auto;
@@ -187,7 +187,7 @@
 }
 
 
-#myUL {
+.guessList {
 
     transition: all .300s ease-in;
     padding: 0;
@@ -210,6 +210,7 @@
 
     }
 
+    /*
     a {
 
         display: block;
@@ -231,4 +232,5 @@
             margin-left: 5px;
         }
     }
+*/
 }

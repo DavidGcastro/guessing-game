@@ -1,7 +1,6 @@
 body,
 html {
     background: #f8f8f8!important;
-    font-family: Oswald, sans-serif;
     font-family: 'Arimo', sans-serif;
 
     margin: 0;
@@ -18,4 +17,20 @@ html {
 
 ul {
     padding: 0;
+}
+
+
+.wrapper {
+
+    height: 10em;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    transition: all 3s ease-in;
+
+    @mixin atSmall {
+        flex-direction: row;
+    }
+
 }

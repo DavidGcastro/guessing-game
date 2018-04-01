@@ -1,0 +1,44 @@
+.centered--content {
+    position: relative;
+    top: -75%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: all .3s ease-out;
+
+
+    h2 {
+        font-weight: 400;
+        line-height: 47px;
+        font-size: 4.5vh;
+        margin: 0;
+    }
+
+    p {
+        margin-top: 0;
+        @mixin atMedium {
+            margin-top: 10px;
+
+        }
+
+        font-size: 3vh;
+    }
+
+    img {
+
+        display: none;
+        @mixin atMedium {
+            display: inline;
+            /*            width: 100%;
+            */
+            flex: none;
+            position: relative;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            max-width: 150px;
+
+        }
+    }
+}

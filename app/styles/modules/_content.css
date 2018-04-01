@@ -1,66 +1,8 @@
-.wrapper {
-
-    height: 10em;
-    position: relative;
-    flex-direction: column;
-    display: flex;
-    height: 100%;
-    transition: all 3s ease-in;
-
-    @mixin atSmall {
-        flex-direction: row;
-    }
-
-}
-
-.centered--content {
-    position: relative;
-    top: -75%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    transition: all .3s ease-out;
-
-
-    h2 {
-        font-weight: 400;
-        line-height: 47px;
-        font-size: 4.5vh;
-        margin: 0;
-    }
-
-    p {
-        margin-top: 0;
-        @mixin atMedium {
-            margin-top: 10px;
-
-        }
-
-        font-size: 3vh;
-    }
-
-    img {
-
-        display: none;
-        @mixin atMedium {
-            display: inline;
-            /*            width: 100%;
-            */
-            flex: none;
-            position: relative;
-            width: 50%;
-            margin: 0;
-            padding: 0;
-            max-width: 150px;
-
-        }
-    }
-}
 
 .leftSide {
     z-index: 5;
 
+/*    BUTTON*/
     &--random {
         transition: all 200ms ease-in;
         font-size: 1rem;
@@ -132,18 +74,6 @@
 
 
 
-    img {
-
-        width: 40%;
-
-        @mixin atSmall {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            max-width: 290px;
-        }
-
-    }
 
     #hintViewer {
 
@@ -170,7 +100,6 @@
 
         &__button {
             transition: all 100ms ease-in;
-
             border: 1px black solid;
             padding: 1vh 1vh;
 
@@ -210,27 +139,5 @@
 
     }
 
-    /*
-    a {
 
-        display: block;
-        font-weight: 300;
-        color: black;
-        background: none;
-        border: none;
-
-        @mixin atLarge {
-            display: inline;
-        }
-
-
-        &:hover {
-            color: #575757;
-        }
-
-        span {
-            margin-left: 5px;
-        }
-    }
-*/
 }

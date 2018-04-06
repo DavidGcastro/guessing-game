@@ -4,7 +4,13 @@ function makeAGuess(game) {
     var output = game.playersGuessSubmission(parseInt(guess, 10));
     $('#myInput').val('');
     $('.title').text(output);
-    if (output !== 'You have already guessed that number.' && output !== "You Win!" && output !== "You Lose.") {
+    if (
+        output !== 'You have already guessed that number.' &&
+        output !== 'You Win!' &&
+        output !== 'You Lose.' &&
+        guess !== ""
+    ) {
+
         $('.guessList').append(
             '<li><span>' +
             game.pastGuesses[game.pastGuesses.length - 1] +
@@ -12,13 +18,18 @@ function makeAGuess(game) {
         );
     }
 
-
-    if (game.pastGuesses.length >= 5 || output === "You Win!" || output === "You Lose.") {
+    if (
+        game.pastGuesses.length >= 5 ||
+        output === 'You Win!' ||
+        output === 'You Lose.'
+    ) {
         $('#myInput').prop('disabled', true);
-        $(".leftSide--random").addClass("disabled")
+        $('.leftSide--random').addClass('disabled');
         $('#subtitle').text('Reset the Game!');
     }
+    console.log(game.pastGuesses)
 }
+
 
 $(document).ready(function () {
     var game = new Game();
@@ -55,8 +66,8 @@ $(document).ready(function () {
     });
 
     $('.leftSide--random').on('click', function (e) {
-        if ($('.leftSide--random').hasClass('disabled')){
-               return;
+        if ($('.leftSide--random').hasClass('disabled')) {
+            return;
         }
         makeAGuess(game);
     });
@@ -64,19 +75,27 @@ $(document).ready(function () {
     $('#hint').click(function () {
         var hints = game.provideHint();
 
-        $('#hintViewer').empty().append("<p class= 'hintDisplay'>" + 'The winning number is ' + hints[0] + ', ' + hints[1] + ', or ' + hints[2] + " </p>");
-
+        $('#hintViewer')
+            .empty()
+            .append(
+                "<p class= 'hintDisplay'>" +
+                'The winning number is ' +
+                hints[0] +
+                ', ' +
+                hints[1] +
+                ', or ' +
+                hints[2] +
+                ' </p>'
+            );
     });
 
     $('#reset').click(function () {
         game = newGame();
         $('.title').text('The Guessing Game');
-        $('#subtitle').text('Pick a number 1 - 100')
-        $(".guessList").empty();
-        $("#hintViewer").empty();
-        $('#myInput, #submit').prop("disabled", false);
-        $('.leftSide--random').removeClass('disabled')
-    
-    })
-
+        $('#subtitle').text('Pick a number 1 - 100');
+        $('.guessList').empty();
+        $('#hintViewer').empty();
+        $('#myInput, #submit').prop('disabled', false);
+        $('.leftSide--random').removeClass('disabled');
+    });
 });

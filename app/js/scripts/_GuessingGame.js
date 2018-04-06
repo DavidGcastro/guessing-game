@@ -50,7 +50,8 @@ Game.prototype.checkGuess = function (num) {
     if (num === this.winningNumber) {
         return 'You Win!';
     }
-    if (this.pastGuesses.indexOf(num) === -1) {
+    if (this.pastGuesses.indexOf(num) === -1 && !isNaN(num)) {
+
         this.pastGuesses.push(num);
     }
 

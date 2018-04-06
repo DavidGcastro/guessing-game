@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/temp/source.css">
-<!--
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
--->
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
     <title>Guessing Game</title>
 </head>
@@ -24,32 +18,16 @@
             <a class="leftSide--random">Submit</a>
 
             <ul class="guessList">
-                <li>
-                    <span>5</span>
-                </li>
-                <li>
-                    <span>6</span>
-                </li>
-                <li>
-                    <span>_</span>
-                </li>
-                <li>
-                    <span>_</span>
-                </li>
-                <li>
-                    <span>_</span>
-                </li>
             </ul>
 
         </div>
         <div class="rightSide">
 
             <div class="buttons">
-                <a class="buttons__button">Hint</a>
-                <a class="buttons__button">Reset</a>
+                <a class="buttons__button" id="hint">Hint</a>
+                <a class="buttons__button" id="reset">Reset</a>
 
                 <div id="hintViewer">
-                    <p>Hint goes here...</p>
                 </div>
 
             </div>
@@ -58,13 +36,11 @@
 
     </div>
     <div class="centered--content">
-        <h2>The Guessing Game</h2>
-        <p>Pick a number 1 - 100</p>
+        <h2 class="title">The Guessing Game</h2>
+        <p id="subtitle">Pick a number 1 - 100</p>
         <img src="http://www.clker.com/cliparts/w/1/x/B/F/C/question-mark-md.png">
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     <script src='js/main.js' type="text/javascript"></script>
 
 </body>

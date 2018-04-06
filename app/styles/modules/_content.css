@@ -31,6 +31,10 @@
         order: 0;
     }
 
+    .disabled{
+        background: #575757;
+    }
+
 
     flex: 1;
     padding: 1rem;

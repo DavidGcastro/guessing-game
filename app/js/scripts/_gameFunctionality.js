@@ -4,7 +4,6 @@ function makeAGuess(game) {
     var output = game.playersGuessSubmission(parseInt(guess, 10));
     $('#myInput').val('');
     $('.title').text(output);
-    console.log(output, game.pastGuesses);
     if (output !== 'You have already guessed that number.' && output !== "You Win!" && output !== "You Lose.") {
         $('.guessList').append(
             '<li><span>' +
@@ -14,16 +13,16 @@ function makeAGuess(game) {
     }
 
 
-    if (game.pastGuesses.length >= 5 || output === "You Win!") {
+    if (game.pastGuesses.length >= 5 || output === "You Win!" || output === "You Lose.") {
         $('#myInput').prop('disabled', true);
-
+        $(".leftSide--random").addClass("disabled")
         $('#subtitle').text('Reset the Game!');
     }
 }
 
 $(document).ready(function () {
     var game = new Game();
-    //overwrite enter Behavior on inpu
+    //overwrite enter Behavior on input
     $('#myInput').bind('keydown', function (event) {
         if (
             event.keyCode == 46 ||
@@ -55,7 +54,10 @@ $(document).ready(function () {
         }
     });
 
-    $('.leftSide--random').on('click', function () {
+    $('.leftSide--random').on('click', function (e) {
+        if ($('.leftSide--random').hasClass('disabled')){
+               return;
+        }
         makeAGuess(game);
     });
 
@@ -73,14 +75,8 @@ $(document).ready(function () {
         $(".guessList").empty();
         $("#hintViewer").empty();
         $('#myInput, #submit').prop("disabled", false);
+        $('.leftSide--random').removeClass('disabled')
+    
     })
-
-
-
-
-
-
-
-
 
 });
